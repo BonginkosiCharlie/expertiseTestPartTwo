@@ -93,8 +93,26 @@ public class Roulette {
 			playersBet[i][1] = choice;
 			playersBet[i][2] = String.valueOf(amount);
 			
-	
+			if (i + 1 == players.size()) {
+				i = -1;
+				//System.out.println(Arrays.deepToString(playersBet));
+				spin++;
+				rouletteNum = generator.nextInt(37);
+				
+				System.out.println("");
+				System.out.println("****************************************");
+				System.out.println("Number: " + spin);
+				System.out.println(">>>>>>>>>> GOLDEN BALL IS: " + rouletteNum + "<<<<<<<<<<<<<<");
+				System.out.println("Player \t\t Bet \t\t Outcome \t\t Winnings");
+				System.out.println("-------------");
+				
+
+				
+				System.out.println("****************************************");
+				System.out.println("");
+			}	
 		}
+		keyboard.close();
 		
 	}
 }
